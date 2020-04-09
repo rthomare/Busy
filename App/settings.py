@@ -170,15 +170,6 @@ WEBPACK_LOADER = {
     }
 }
 
-iOS_CONFIGURATION_KEY = 'iOS'
-CLIENT_CONFIGURATION = {
-    iOS_CONFIGURATION_KEY : {
-        'required_version': get_env_variable('REQUIRED_iOS_VERSION'),
-        'update_title': get_env_variable('REQUIRED_UPDATE_TITLE'),
-        'update_description': get_env_variable('REQUIRED_UPDATE_DESCRIPTION'),
-    }
-}
-
 GRAPHENE = {} # GRAPHQL Realted configs
 
 try:

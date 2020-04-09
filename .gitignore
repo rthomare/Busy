@@ -1,0 +1,9 @@
+node_modules/
+Configs/static/bundles/
+db.sqlite3
+venvs/
+.DS_Store
+*.pyc
+discDatabase
+local_settings.py
+staticfiles/*

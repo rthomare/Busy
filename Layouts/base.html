@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        {% load static %}
+
+        <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!-- Custom CSS -->
+        <link href="{% static "css/custom.css" %}" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{% static "css/component.css" %}" />
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        
+        <link rel="icon" type="image/png" href="{% static "img/favicon.png" %}" sizes= %}"32x32" />
+        <link rel="icon" type="image/png" href="{% static "img/favicon.png" %}" sizes=16x16" />
+
+        {% block headers %}
+        {% endblock %}
+
+        <!-- JS -->
+        <script src="{% static "js/modernizr.custom.js" %}"></script>
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <script src="{% static "js/classie.js" %}"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="/" id="scroller"><img class="nav-logo" src="{% static "img/Logo.png" %}" alt=""></a>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        <br/>
+	    {% block content %}
+	    {% endblock %}
+        {% include 'footer_partial.html' %}
+    </body>
+</html>

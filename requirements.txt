@@ -1,0 +1,15 @@
+django
+psycopg2-binary
+django-cors-middleware
+dj-database-url
+gunicorn
+whitenoise
+hashids
+django-webpack-loader
+requests
+pyyaml 
+ua-parser 
+user-agents
+django-user-agents
+python-memcached
+graphene-django

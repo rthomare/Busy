@@ -1,0 +1,12 @@
+DATABASE_OVERRIDE = True
+
+# Grabs the site root setup in settings.py
+DEBUG = True
+
+# sqlite is the quick an easy development db
+DATABASES = {
+  'default': {
+      'ENGINE': 'django.db.backends.sqlite3',
+      'NAME': 'discDatabase',
+  }
+}

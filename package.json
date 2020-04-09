@@ -1,0 +1,46 @@
+{
+  "name": "disc-backend",
+  "version": "1.0.0",
+  "description": "npm modules for disc-backend",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "webpack --config webpack.config.js"
+  },
+  "engines": {
+    "node": "6.11.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/discc/Backend.git"
+  },
+  "author": "rthomare",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/discc/Backend/issues"
+  },
+  "homepage": "https://gitlab.com/discc/Backend#README",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "jquery": "^3.2.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-hot-loader": "^3.1.1",
+    "webpack": "^3.8.1",
+    "webpack-bundle-tracker": "^0.2.0",
+    "webpack-dev-server": "^2.9.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "jquery": "^3.2.1",
+    "react": "^16.1.0",
+    "react-dom": "^16.1.0",
+    "webpack": "^3.8.1",
+    "webpack-bundle-tracker": "^0.2.0"
+  }
+}

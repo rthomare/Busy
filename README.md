@@ -27,7 +27,7 @@ TBD
 
 I recommend deploying to a heroku server. For information see https://devcenter.heroku.com/articles/deploying-python
 1. Update the people object the following file:  App/management/commands/modelrefresh.py
-  - note busy image and not busy image can be gifs...
+    - note busy image and not busy image can be gifs...
 
 2. Create a heroku application: https://heroku.com
 3. From heroku add the following

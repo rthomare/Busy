@@ -48,6 +48,7 @@ ALLOWED_HOSTS = get_env_variable('ALLOWED_HOSTS').split(",")
 
 INSTALLED_APPS = [
     'App',
+    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -59,7 +60,21 @@ INSTALLED_APPS = [
     'django_user_agents',
 ]
 
+MIDDLEWARE = [
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware', 
+    'django.contrib.messages.middleware.MessageMiddleware', 
+]
+
 MIDDLEWARE_CLASSES = [
+    # Django Admin and Dependencies
+    'django.contrib.admin',
+    'django.contrib.auth', 
+    'django.contrib.contenttypes',
+    'django.contrib.messages',
+    'django.contrib.sessions',
+
+    # Everything else
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

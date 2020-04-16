@@ -23,4 +23,20 @@ TBD
 - ```sudo chown `whoami` ./Configs/static/bundles/index.js```
 - ```sudo chown `whoami` ./Configs/static/bundles/aboutus.js```
 
+# Suggested Deployment
+
+I recommend deploying to a heroku server. For information see https://devcenter.heroku.com/articles/deploying-python
+1. Update the people object the following file:  App/management/commands/modelrefresh.py
+    - note busy image and not busy image can be gifs...
+
+2. Create a heroku application: https://heroku.com
+3. From heroku add the following
+    - (Free) Add a postgres hobby-dev database add-on to your server: https://devcenter.heroku.com/articles/heroku-postgresql
+4. Update the environment variables to the following: https://ibb.co/jf8DFXQ
+5. Deploy the app: ```git push heroku master```
+6. Using the heroku command line add run the following commands:
+    - heroku run ```python manage.py makemigrations```
+    - heroku run ```python manage.py migrate```
+    - heroku run ```python manage.py collectstatic```
+
 

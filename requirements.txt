@@ -13,3 +13,4 @@ user-agents
 django-user-agents
 python-memcached
 graphene-django
+giphy_client

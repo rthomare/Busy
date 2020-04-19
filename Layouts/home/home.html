@@ -3,37 +3,40 @@
 {% block headers %}
     <title>Busy</title>
     <meta name="description" content="Busy?" />
-    <meta http-equiv="refresh" content="60"/>
+    <!-- <meta http-equiv="refresh" content="60"/> -->
     <script   src="https://code.jquery.com/jquery-3.4.1.min.js"   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="   crossorigin="anonymous"></script>
     <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
     <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 {% endblock %}
 {% block content %}
     <div id="intro" class="center-align">
-        <h2>Are You Busy?</h2>
+        <h3 class="text-uppercase font-weight-bold">
+            Are You Busy?
+        </h3>
         <br/>
         <div class="container">
             {% for person in people %}
             <br/>
             <div class="row">
-                <div class="col-md">
-                    <span class="align-middle">
-                    <h2>{{person.name}}:</h2>
-                    <div class="col-md">
-                        <input id="toggle-event" type="checkbox" data-on="Free!" data-off="Busy" data-onstyle="primary" data-offstyle="danger" data-toggle="toggle" 
-                        {% if person.busy %}
-                            unchecked
-                        {% else %}
-                            checked
-                        {% endif %} data-width="120" data-height="50" data-person-id={{person.id}} data-busy-image="{{person.busy_image}}" data-not-busy-image="{{person.not_busy_image}}"/>
-                    </div>
+                <div class="col-md" style="margin: auto;">
+                    <span class="align-middle"></span>
+                        <h2>{{person.name}}</h2>
+                        <br/>
+                        <div class="col-md">
+                            <input id="toggle-event" type="checkbox" data-on="Free!" data-off="Busy" data-onstyle="primary" data-offstyle="danger" data-toggle="toggle" 
+                            {% if person.busy %}
+                                unchecked
+                            {% else %}
+                                checked
+                            {% endif %} data-width="120" data-height="50" data-person-id={{person.id}} data-busy-image="{{person.busy_image}}" data-not-busy-image="{{person.not_busy_image}}"/>
+                        </div>
                     </span>
                 </div>
                 <div class="col-md">
                     {% if person.busy %}
-                    <img src="{{person.busy_image}}" alt="busy img" style="padding-top: 15px;" width=250/>
+                    <img src="{{person.busy_image_url}}" alt="busy img" style="padding-top: 15px;" height="250"/>
                     {% else %}
-                    <img src="{{person.not_busy_image}}" alt="not busy img" style="padding-top: 15px;" width=250/>
+                    <img src="{{person.not_busy_image_url}}" alt="not busy img" style="padding-top: 15px;" height="250"/>
                     {% endif %}
                 </div>
             </div>

@@ -43,6 +43,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '8qcwm1@#tkbl&fg0xeu*2+gggw1%(b50d0r+3c+()au0kw&k_@'
 
 ALLOWED_HOSTS = get_env_variable('ALLOWED_HOSTS').split(",")
+GIPHY_API_KEY = get_env_variable('GIPHY_API_KEY')
 
 # Application definition
 

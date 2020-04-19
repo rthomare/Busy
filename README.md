@@ -29,7 +29,7 @@ I recommend deploying to a heroku server. For information see https://devcenter.
 1. Create a heroku application: https://heroku.com
 2. From heroku add the following
     - (Free) Add a postgres hobby-dev database add-on to your server: https://devcenter.heroku.com/articles/heroku-postgresql
-3. Update the environment variables to the following: https://ibb.co/jf8DFXQ
+3. Update the environment variables to the following: https://ibb.co/88yY6mG
   a. Note inorder to get the giphy search api to work you'll need to get a giphy api key: https://developers.giphy.com
 4. Deploy the app: ```git push heroku master```
 5. Using the heroku command line add run the following commands:

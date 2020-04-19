@@ -18,10 +18,10 @@ def busy(request, person_id):
     person = get_object_or_404(Person, pk=person_id)
     person.busy = True
     person.save()
-    return JsonResponse(person, safe=False)
+    return JsonResponse({'person_id': person_id, 'busy': True}, safe=True)
 
 def not_busy(request, person_id):
     person = get_object_or_404(Person, pk=person_id)
     person.busy = False
     person.save()
-    return JsonResponse(person, safe=False)
+    return JsonResponse({'person_id': person_id, 'busy': False}, safe=True)

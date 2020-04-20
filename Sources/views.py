@@ -8,7 +8,7 @@ import os
 
 def home(request):
     template = loader.get_template('home/home.html')
-    people = Person.objects.all()
+    people = Person.objects.all().order_by('pk')
     context = {
         "people": people,
     }
@@ -18,10 +18,10 @@ def busy(request, person_id):
     person = get_object_or_404(Person, pk=person_id)
     person.busy = True
     person.save()
-    return JsonResponse({'person_id': person_id, 'busy': True}, safe=True)
+    return JsonResponse({'person_id': person_id, 'busy': person.busy}, safe=True)
 
 def not_busy(request, person_id):
     person = get_object_or_404(Person, pk=person_id)
     person.busy = False
     person.save()
-    return JsonResponse({'person_id': person_id, 'busy': False}, safe=True)
+    return JsonResponse({'person_id': person_id, 'busy': person.busy}, safe=True)

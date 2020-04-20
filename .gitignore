@@ -4,6 +4,6 @@ db.sqlite3
 venvs/
 .DS_Store
 *.pyc
-discDatabase
+local_database
 local_settings.py
 staticfiles/*

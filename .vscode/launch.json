@@ -13,7 +13,7 @@
                 "runserver",
             ],
             "django": true,
-            "pythonPath": "/Users/rohanthomare/Developer/Busy/venvs/alpha3/bin/python3",
+            "python": "/Users/rohanthomare/Developer/Busy/venvs/alpha3/bin/python3",
         }
     ]
 }

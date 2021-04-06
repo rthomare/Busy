@@ -52,3 +52,10 @@ class Person(models.Model):
             return value
         return self.not_busy_image
 
+    @property
+    def image_url(self):
+        if (self.busy):
+            return self.busy_image_url
+        else:
+            return self.not_busy_image_url
+
